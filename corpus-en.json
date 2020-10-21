@@ -1,0 +1,280 @@
+{
+  "name": "Corpus",
+  "locale": "en-US",
+  "data": [
+    {
+      "intent": "experience.general",
+      "utterances": [
+        "What experience do you have",
+        "What are some of your experiences",
+        "Tell me about yourself",
+        "What's your background",
+        "What are some projects you worked on"
+      ]
+    },
+    {
+      "intent": "intent.recruit",
+      "utterances": [
+        "we are looking for someone"
+      ]
+    },
+    {
+      "intent": "experience.current_work",
+      "utterances": [
+        "what is your current job",
+        "what is your current position",
+        "where are you working now",
+        "what are you working on now",
+        "what is your current company"
+      ]
+    },
+    {
+      "intent": "experience.work",
+      "utterances": [
+        "what are your work experiences",
+        "what are your job experiences",
+        "what are your professional experiences"
+      ]
+    },
+    {
+      "intent": "experience.education",
+      "utterances": [
+        "what school did you go to",
+        "are you a recent grad?",
+        "when did you graduate?"
+      ]
+    },
+    {
+      "intent": "experience.publication",
+      "utterances": [
+        "do you have any publications",
+        "have you done any research",
+        "what research did you worked on"
+      ]
+    },
+    {
+      "intent": "experience.programming_languages",
+      "utterances": [
+        "what programming languages do you know",
+        "what language do you program in",
+        "what programming language do you use",
+        "what are some of the programming languages that you know",
+        "what are some languages that you often program in"
+      ]
+    },
+    {
+      "intent": "experience.human_languages",
+      "utterances": [
+        "what languages do you speak",
+        "what language do you speak",
+        "do you speak any other languages"
+      ]
+    },
+    {
+      "intent": "experience.ambiguous_languages",
+      "utterances": [
+        "what language do you know",
+        "what languages do you know"
+      ]
+    },
+    {
+      "intent": "followup.affirmative",
+      "utterances": [
+        "yes",
+        "yea",
+        "sure",
+        "go ahead",
+        "yes please",
+        "that would be nice",
+        "please"
+      ]
+    },
+    {
+      "intent": "followup.negative",
+      "utterances": [
+        "no",
+        "nope",
+        "no thanks",
+        "please don't",
+        "I am good",
+        "Let's move on",
+        "How about something else"
+      ]
+    },
+    {
+      "intent": "followup.filler",
+      "utterances": [
+        "let's say @skill",
+        "I would like to know more about @skill"
+      ]
+    },
+    {
+      "intent": "followup.more",
+      "utterances": [
+        "tell me more"
+      ]
+    },
+    {
+      "intent": "followup.experience.what",
+      "utterances": [
+        "what did you work on",
+        "what is something that you worked on",
+        "what did you do in that project",
+        "what did you do in this project"
+      ]
+    },
+    {
+      "intent": "followup.experience.challenge",
+      "utterances": [
+        "what were some challenge you had",
+        "what was the hardest part",
+        "was there anything that you find particularly difficult"
+      ]
+    },
+    {
+      "intent": "followup.experience.enjoy",
+      "utterances": [
+        "what do you enjoy the most",
+        "what was the most interesting part",
+        "what did you find interesting",
+        "tell me something interesting"
+      ]
+    },
+    {
+      "intent": "experience.skills",
+      "utterances": [
+        "do you know @skill",
+        "do you have experience working with @skill",
+        "did you worked on any project using @skill",
+        "how much experience do you have with @skill",
+        "have you worked with @skill",
+        "What @skill experience do you have",
+        "What are some of your @skill experiences",
+        "What are some @skill projects you worked on",
+        "Have you worked on any @skill project?",
+        "do you have any @skill experience?",
+        "do you have any experience working as a @skill developer?",
+        "have you worked as a @skill developer",
+        "@skill projects",
+        "what are some @skill project you have done?"
+      ]
+    },
+    {
+      "intent": "personal.good",
+      "utterances": [
+        "what are you good at",
+        "what is something that you like to do"
+      ]
+    },
+    {
+      "intent": "experience.language_specific",
+      "utterances": [
+        "do you speak @language",
+        "do you know @language",
+        "do you know how to @language"
+      ]
+    },
+    {
+      "intent": "experience.projects",
+      "utterances": [
+        "what did you work on in the @project project",
+        "what were something you worked on in the @project project"
+      ]
+    },
+    {
+      "intent": "smalltalk.life",
+      "utterances": [
+        "how are you doing",
+        "how's life"
+      ]
+    },
+    {
+      "intent": "smalltalk.like",
+      "utterances": [
+        "do you like @thing"
+      ]
+    },
+    {
+      "intent": "general.greeting",
+      "utterances": [
+        "hello",
+        "hi",
+        "howdy",
+        "hey"
+      ],
+      "answers": [
+        "hi",
+        "hello"
+      ]
+    },
+    {
+      "intent": "None",
+      "utterances": [
+        "I need advice",
+        "I need some advice",
+        "can you give me some advice?",
+        "what should I do?"
+      ],
+      "answers": [
+        "Sorry, I don't understand"
+      ]
+    }
+  ],
+  "entities": {
+    "language": {
+      "options": {
+        "chinese": ["chinese", "mandarin"],
+        "cantonese": ["cantonese"],
+        "japanese": ["japanese"]
+      }
+    },
+    "project": {
+      "options": {
+        "Simbrain": ["Simbrain"],
+        "MBET": ["MBET", "Expense Tracker"],
+        "tmrw": ["tmrw", "Kanban", "Kanban Board"],
+        "Restaurant Roulette": ["Restaurant Roulette"],
+        "Simbrain Web": ["Simbrain Web"],
+        "NullPointerException": ["NPE", "NullPointerException"],
+        "e-DVIR": ["e-DVIR", "Driver Vehicle Inspection Report", "edvir"]
+      }
+    },
+    "skill": {
+      "options": {
+        "js": ["javascript", "js"],
+        "ts": ["typescript", "type script", "ts"],
+        "react": ["react", "reactjs", "react.js", "react js"],
+        "sql": ["SQL", "MySQL", "PostgreSQL"],
+        "rails": ["ruby on rails", "rails", "ror", "ruby"],
+        "python": ["python", "py"],
+        "java": ["java"],
+        "spring": ["spring", "spring boot"],
+        "ktor": ["ktor"],
+        "android": ["android"],
+        "web-frameworks": ["flask", "django", "laravel"],
+        "nosql": ["mongodb", "nosql", "dynamodb"],
+        "cloud": ["aws", "google cloud", "gce", "amazon web services", "s3", "ec2", "azure", "cloud function"],
+        "php": ["php"],
+        "angular": ["angular"],
+        "angularjs": ["angular js", "angular.js"],
+        "vue": ["vue"],
+        "c++": ["c++"],
+        "c": ["c"],
+        "architecture": ["architecture", "simd", "avx", "sse", "assembly", "asm", "mips"],
+        "ui": ["ui", "user interface"],
+        "ux": ["user experience", "ux"],
+        "linux": ["linux"],
+        "algo": ["algorithm", "data structure"],
+        "kotlin": ["kotlin"],
+        "designpattern": ["design pattern", "dsl", "builder pattern"],
+        "fullstack": ["full stack", "full-stack", "fullstack", "web", "web development"],
+        "frontend": ["front end", "front-end", "frontend", "html", "css", "sass", "scss"],
+        "backend": ["back end", "back-end", "backend"],
+        "rest": ["RESTful", "REST", "REST API"],
+        "graphql": ["GraphQL", "GraphQL API"],
+        "node": ["Node JS", "Node", "Node.js"],
+        "socket-io": ["Socket.io", "Web Socket", "Socket IO", "socketio", "websocket"]
+      }
+    }
+  }
+}

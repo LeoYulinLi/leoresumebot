@@ -1,0 +1,128 @@
+{
+  "skills": [
+    { "name": "js" },
+    { "name": "ts" },
+    { "name": "react" },
+    { "name": "sql" },
+    { "name": "rails" },
+    { "name": "python" },
+    { "name": "java" },
+    { "name": "spring" },
+    { "name": "ktor" },
+    { "name": "android" },
+    { "name": "web-framework" },
+    { "name": "nosql" },
+    { "name": "cloud" },
+    { "name": "php" },
+    { "name": "angular" },
+    { "name": "angularjs" },
+    { "name": "vue" },
+    { "name": "c++" },
+    { "name": "c" },
+    { "name": "architecture" },
+    { "name": "ui" },
+    { "name": "ux" },
+    { "name": "linux" },
+    { "name": "algo" },
+    { "name": "kotlin" },
+    { "name": "designpattern" },
+    { "name": "fullstack" },
+    { "name": "frontend" },
+    { "name": "backend" },
+    { "name": "rest" },
+    { "name": "graphql" },
+    { "name": "node" },
+    { "name": "socket-io" }
+  ],
+  "work": [
+    {
+      "name": "University of California, Merced (Simbrain)",
+      "description": "Worked on Simbrain, an open source neural network simulator and visualizer."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Simbrain",
+      "description": "Simbrain is an open source neural network simulator and visualizer",
+      "highlights": [
+        "Designed a 2D game-like simulation environment using Swing and Piccolo2D to support larger scale agent based simulations with collisions and sensory inputs",
+        "Improved design patterns and readability of source code using Java annotations, fluent builders, and Kotlin DSL, for other developers/simulation designers who are used to the GUI to have a more similar experience when scripting",
+        "Implemented a genetic algorithm on artificial neural networks along with the Gradle configuration to run the simulation on servers and the Swing UI to visualize the result of evolutions"
+      ],
+      "url": "http://simbrain.net/",
+      "keywords": ["kotlin", "java", "ui", "designpattern"]
+    },
+    {
+      "name": "MBET",
+      "description": "A expense tracker project built during Mint Bean Hackathon (winning project)",
+      "url": "https://leoyulinli.github.io/MBET/#/expenses",
+      "highlights": [
+        "Utilized material ui features, such as input box with auto complete based on existing data to improve user experience",
+        "Designed responsive ui that works well on both desktop and mobile devices"
+      ],
+      "keywords": ["react", "frontend", "ui", "ts", "js"]
+    },
+    {
+      "name": "tmrw",
+      "description": "A user friendly, front-end only Kanban Board project built during Mint Bean Hackathon (winning project)",
+      "url": "https://mintkanban.github.io/MintKanban/",
+      "highlights": [
+        "Setup the framework to use typescript and react hooks to shorten development time",
+        "Implemented load/save feature to allow users to store and share their kanban"
+      ],
+      "keywords": ["react", "frontend", "ui", "ts", "js"]
+    },
+    {
+      "name": "Simbrain Web",
+      "description": "A simple web version of Simbrain. The main idea is to let users try out the basic features of Simbrain before having to downloading the desktop application. It also allows the showcase of simple neural network in a interactive HTML canvas.",
+      "highlights": [
+        "Utilized paper.js scene graph features to efficiently manage objects"
+      ],
+      "url": "https://leoyulinli.github.io/simbrain_web/",
+      "keywords": ["frontend", "js", "ts"]
+    },
+    {
+      "name": "Restaurant Roulette",
+      "description": "An app solving the classic adage: \"what should we eat for today?\".",
+      "highlights": [
+        "Designed the backend with features such as MongoDB Time-To-Live to cache API requests while ensuring data does not go out of date.",
+        "Ensured data integrity of the database by sanitizing user inputs and moved data processing to the server-side to prevent fraudulent inputs.",
+        "Utilized async requests in parallel to fetch data from API, improving the overall load time."
+      ],
+      "keywords": ["react", "rest", "node", "socket-io", "nosql", "ui", "js", "fullstack", "frontend", "backend"],
+      "url": "https://rrc-app.herokuapp.com/"
+    },
+    {
+      "name": "NullPointerException",
+      "description": "A Q&A web application tailored towards software developers based off of Stack Overflow.",
+      "highlights": [
+        "Utilized SQL view with rails scenic to simplify database query which reduced errors when creating active records.",
+        "Implemented loading indicators, modals, and pop-ups from scratch to make the website feel more responsive, improving the overall user experience.",
+        "Incorporated react-markdown to render user inputs in real-time, providing better visual feedback, and allowing users to catch syntax errors sooner."
+      ],
+      "keywords": ["react", "rest", "rails", "sql", "fullstack", "ui", "js", "frontend", "backend"],
+      "url": "https://npe-app.herokuapp.com/"
+    },
+    {
+      "name": "e-DVIR",
+      "description": "Capstone project partnered with Nestlé to digitize the process of filling and managing driver vehicle inspection reports.",
+      "highlights": [
+        "Designed a mobile app using Ionic/Angular, allowing drivers to fill out and send inspection reports on their devices without coming back to base so that the company would be notified of any vehicle related issues sooner.",
+        "Developed a RESTful backend using Claudia.js and DynamoDB and deployed it to AWS using the serverless architecture, saving time on server setup and ongoing maintenance.",
+        "Implemented a dynamic form using Angular components where drivers are directed step by step to inspect the vehicle in a more efficient order, reducing the probability of missing inspection items."
+      ],
+      "keywords": ["angular", "cloud", "rest", "nosql", "fullstack", "ts", "js", "frontend", "backend"],
+      "startDate": "2019-02-01",
+      "endDate": "2019-05-31"
+    },
+    {
+      "name": "MouseTrap",
+      "description": "Mouse Traps is a progressive level arcade game were mice and other vermin walk around a maze with the objective of reproducing to the point of world conquest.",
+      "highlights": [
+        "Designed the framework using fluent builder patters to improve development efficiency",
+        "Implemented some core features of the game such as collision, movement, animations, etc."
+      ],
+      "keywords": ["c++"]
+    }
+  ]
+}

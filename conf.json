@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "nlp": {
+      "corpora": [
+        "./corpus-en.json"
+      ],
+      "nlu": { "log": true }
+    }
+  },
+  "use": [
+    "Evaluator",
+    "JavascriptCompiler",
+    "Template",
+    "Nlp",
+    "LangEn"
+  ]
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { generateGuid } from "./utils/botkit-utils";
 import "./App.scss"
 import { Button, Card, Container, Form, FormControl, InputGroup } from "react-bootstrap";
+import ReactMarkdown from 'react-markdown'
 
 interface Message {
   user?: string,
@@ -54,7 +55,7 @@ function App() {
         <Card.Body>{ history.map(it => (
           <div className={ it.user ? "other" : "me" }>
             <div className="bubble">
-              { it.text }
+              { it.user ? (<ReactMarkdown>{ it.text }</ReactMarkdown>) : it.text  }
             </div>
           </div>
         )) }</Card.Body>
