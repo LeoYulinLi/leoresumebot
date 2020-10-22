@@ -61,8 +61,51 @@ intent. The resulting pattern can match any sentences that are close enough in m
 provides a more natural feel to the conversation.
 
 #### Why NLP?
-For example, you can say something like "tell me about your expeirience" would work perfectly fine, even though the
-phrase is not the training set (and also the experience has a typo in it)
+For example, you can say something like "tell me about your expeirience", and the engine will correctly produce the
+`experience.general` intent, even though the phrase is not the training set (and also the experience has a typo in it)
+
+This is what the engine sees when you input the phrase "tell me about your expeirience":
+```javascript
+{
+  locale: 'en',
+  utterance: 'tell me about your expeirience',
+  languageGuessed: false,
+  localeIso2: 'en',
+  language: 'English',
+  nluAnswer: {
+    classifications: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    entities: undefined,
+    explanation: undefined
+  },
+  classifications: [
+    { intent: 'experience.general', score: 0.5762581172090295 },
+    { intent: 'email', score: 0.18168304652235082 },
+    { intent: 'phone', score: 0.12306806515021253 },
+    { intent: 'followup.more', score: 0.0515882293872288 },
+    { intent: 'followup.projects', score: 0.03460826624771439 },
+    { intent: 'experience.work', score: 0.032794275483463815 }
+  ],
+  intent: 'experience.general',
+  score: 0.5762581172090295,
+  domain: 'default',
+  sourceEntities: [],
+  entities: [],
+  answers: [],
+  answer: undefined,
+  actions: [],
+  sentiment: {
+    score: 0.75,
+    numWords: 5,
+    numHits: 2,
+    average: 0.15,
+    type: 'senticon',
+    locale: 'en',
+    vote: 'positive'
+  }
+}
+```
+As you can see, even though the engine wasn't so sure about the phrase (`score: 0.5762581172090295`), it was still able
+to produce some result. 
 
 ### Context
 
@@ -92,8 +135,9 @@ There are also some hard coded context depends on the situation. Let's say in th
 
 Since there is only one project that matches the description, if a user would like to know more about the project,
 they should be able to directly ask the bot to tell them more (e.g. "tell me more about _this_ project).
-The context `this` in this case should be really clear to the user, so the bot has a feature where the resulting project
-list has only one entry, it is automatically added to the context. So the user can have a conversation like this:
+Since there is only one project, Simbrain, the context `this` can only refer to the Simbrain project,
+In this case the bot has a feature where when there is only one project in the resulting list, it automatically adds
+that project to the context. So the user can have a conversation like this:
 
 > user: do you know kotlin
 > 
