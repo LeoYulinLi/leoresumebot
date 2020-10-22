@@ -12,6 +12,19 @@ import { experienceResponder } from "./handlers/experiences";
 import { sampleOne } from "./utils";
 import { projectLongDescriptions } from "./data";
 
+import express from "express"
+import path from "path";
+
+const app = express()
+
+app.use(express.static('frontend/build'));
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+})
+
+const port = 80;
+app.listen(port, () => console.log(`Server is running on port ${ port }`));
+
 const controller = new Botkit({
   adapter: new WebAdapter({
     options: {
