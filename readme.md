@@ -4,6 +4,11 @@ Just a bot to chat with you on my experiences :P
 ## Demo
 http://resumebot.r32.me/
 
+## Features
+- The bot knows the context
+- You can ask the bot follow-up questions
+- Ask about details of my projects that are not listed on the resume (e.g. challenges)
+
 ## What can I say to it
 The bot process your input using NLP, so give it a try, it might understand you even if the wording is difference from
 what I would expect!
@@ -100,7 +105,7 @@ list has only one entry, it is automatically added to the context. So the user c
 > ...
  
 
-### Handlers
+### Handlers (Output)
 The base handler is inside the `server.ts`.
 
 ```typescript
@@ -121,6 +126,26 @@ There are 2 main source of answers: one is from the `corpus-en.json` if I don't 
 wrote my own response function to return the answer. Using custom function allows me to return multiple lines of answers
 as well as randomizing the response to give it more variety.
 
+#### Exampel function: (project function)
+`src/handlers/experiences.ts`
+```typescript
+    function withEntity(entity: Entity): string[] {
+      const project = resume.projects.filter(it => it.name === entity.option)[0]
+      
+      function what(): string[] {
+        return [
+          sampleOne([
+            "Here are something I worked on during this project:",
+            "This is a summary on what I did during this project:"
+          ]),
+          ...project.highlights
+        ]
+      }
+
+    }
+```
+by providing an project entity, the `what` function can pull out the highlight from the resume and append it after some
+phrases.
 
 
 ## Screenshots
