@@ -79,6 +79,42 @@ const mapResponseToAnswer = function () {
         nextContext = [entity, ...nextContext]
         return ["I have done many projects, and this is one of them", ...projectLongDescriptions[projectName]]
       }
+      case "experience.programming_languages": {
+        return [
+          sampleOne([
+            "I use a variety of languages",
+            "I use multiple languages",
+            "Depends on the use case, I pick different languages"
+          ]),
+          sampleOne([
+            "I use TypeScript/JavaScript, Kotlin/Java, Ruby, SQL, along with frameworks like React and Rails",
+            "I mostly use TypeScript/JavaScript, Kotlin/Java, Ruby, SQL, etc, with frameworks like React and Rails"
+          ]),
+          sampleOne([
+            "Are you looking for someone that is familiar with a specific language or framework?",
+            "Are there any particular language that you would like to know more?"
+          ]),
+          sampleOne([
+            "I can show you some of my projects done in that language or framework",
+            "Let me know and I can show you some of my project done using that technology"
+          ])
+        ]
+      }
+      case "experience.ambiguous_languages": return [
+        sampleOne([
+          "You mean spoken language or programming language?",
+          "Are you talking about programming language or spoken language?"
+        ])
+      ]
+      case "experience.human_languages": return [
+        sampleOne([
+          "I speak Chinese, Cantonese, and some Japanese",
+        ]),
+        sampleOne([
+          "Oh and English :P",
+          "and maybe English? I am not sure what I am speaking :P"
+        ])
+      ]
     }
 
     console.log(`${response.intent} [${response.entities.map(it => it.option).join(", ")}] {${context.map(it => it.option).join(", ")}}`)
