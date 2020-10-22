@@ -13,11 +13,9 @@ export function skillResponder(knowledgebase: Resume) {
     return { ...acc, [key]: value }
   }, {} as Record<string, Project[]>)
 
-  let oneProject: Project | undefined
-
   return function skillHandler(entities: Entity[]): [string[], Project | undefined] {
 
-    oneProject = undefined
+    let oneProject: Project | undefined
 
     const skillsWithProjects = entities
       .filter(skill => skillProjectMapping[skill.option] && skillProjectMapping[skill.option].length > 0)
@@ -54,6 +52,9 @@ export function skillResponder(knowledgebase: Resume) {
           `
         }
       })
+
+      // having one project means the bot should have clear context
+      // when the use asks questions like "tell me more about it"
       if (projects.length === 1) {
         oneProject = projects[0]
       }

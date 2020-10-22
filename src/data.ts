@@ -78,6 +78,51 @@ export const skillTrivia = {
   ],
 }
 
+export const projectLongDescriptions: { [key: string]: string[] } = {
+  "Simbrain": [
+    "Simbrain is a neural network simulator and visualizer created by Jeffery Yoshimi, my artificial neural network professor.",
+    "The main goal for this application is to be as intuitive as possible for people understand and design their own neural networks",
+    "Neural networks are like your CPUs. They are powerful, but without some I/O, it is pretty hard to use",
+    "So Simbrain provides extra functionalities such as a 2D game like world for you to couple your neural networks to agents in the world",
+    "or you could input data from a csv file, which could contain wide range of data, such as flatten images of hand written digits",
+    "and then have the network output the recognized number",
+    "I like this project a lot, that's why I have been working on it for 3 years now"
+  ],
+  "MBET": [
+    "MBET stands for MintBean Expense Tracker, and it is an expense tracker :P",
+    "Yea, so main features includes: categorization, separating expense by account, tally, and more"
+  ],
+  "tmrw": [
+    "tmrw is a kanban board project Bryan, Ryan, and I built during the MintBean Hackathon.",
+    "During the design phase, the main goal was to make it as easy to use as possible, and create it as if something that we would personally like to use",
+    "So with these ideas in mind, we decided to implemented features such as drag and drop, saving and loading (since this was a front end only project, there is no server to store your data), and an amazing onboarding tour",
+    "The tour was kinda a last minute decision, but it helped a lot in terms of user experience"
+  ],
+  "Simbrain Web": [
+    "Simbrain Web is more of a project to full fill my personal curiosity on if it is possible to create the Simbrain application on the web",
+    "One big reason is Simbrain is now a 700MiB+ application, it takes some time for people to download, and you would also have to down load JRE to run the program",
+    "So one potential solution is to move to the web, at least partially, for people to get a sense of it before considering downloading the full application"
+  ],
+  "Restaurant Roulette": [
+    "Restaurant Roulette is a project done during App Academy.",
+    "It was a group MERN project, and Alex, Ryan, Wendy worked with me on this",
+    "The main feature is to allow a user, or multiple users, to generate a restaurant of some categories",
+    "solving the problem of \"where should I eat today\"",
+  ],
+  "NullPointerException": [
+    "Since I decided to include versioning, querying a thread was more involved",
+    "but thanks to SQL view and Rails scenic, I was able to condense the querying process a lot"
+  ],
+  "e-DVIR": [
+    "e-DVIR was my capstone project at UC Merced",
+    "The main purpose was to create a more efficient way of filing Driver Vehicle Inspection Report as well as archiving them"
+  ],
+  "MouseTrap": [
+    "Mouse Traps is a progressive level arcade game were mice and other vermin walk around a maze with the objective of reproducing to the point of world conquest",
+    "Your job as the player is too kill as many pests, with as few traps, as possible in order to prevent the fall of mankind :P"
+  ]
+}
+
 export const challenges = {
   "Simbrain": [
     "This is a project that I have been working on for about 3 years now...",
@@ -136,33 +181,6 @@ export const challenges = {
     "the whole project move forward much faster",
     "Lesson learned: communication is the key in a group project"
   ]
-}
-
-const enjoy = {
-  "Simbrain": {
-
-  },
-  "MBET": {
-
-  },
-  "tmrw": {
-
-  },
-  "Simbrain Web": {
-
-  },
-  "Restaurant Roulette": {
-
-  },
-  "NullPointerException": {
-
-  },
-  "e-DVIR": {
-
-  },
-  "MouseTrap": {
-
-  }
 }
 
 export const images: { [key: string]: string } = {

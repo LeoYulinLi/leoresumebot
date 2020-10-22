@@ -1,6 +1,6 @@
 import { Entity, Resume } from "./types";
 import { sampleOne } from "../utils";
-import { challenges } from "../data";
+import { challenges, projectLongDescriptions } from "../data";
 
 export function experienceResponder(resume: Resume) {
 
@@ -33,6 +33,10 @@ export function experienceResponder(resume: Resume) {
       const project = resume.projects.filter(it => it.name === entity.option)[0]
       if (!project) return [exceptionString]
 
+      function about(): string[] {
+        return projectLongDescriptions[project.name]
+      }
+
       function what(): string[] {
         return [
           sampleOne([
@@ -49,14 +53,16 @@ export function experienceResponder(resume: Resume) {
 
       switch (intent) {
         case "followup.experience.what":
-        case "followup.more": return what()
+        case "followup.affirmative": return what()
         case "followup.experience.challenge": return challenge()
+        case "followup.more":
+        case "followup.projects": return about()
         default: return [exceptionString]
       }
 
     }
 
-    if (entities.length > 0) {
+    if (projects.length > 0) {
       return withEntity(projects[0])
     } else {
       return withEntity(contextProjects[0])

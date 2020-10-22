@@ -25,7 +25,8 @@
         "what is your current position",
         "where are you working now",
         "what are you working on now",
-        "what is your current company"
+        "what is your current company",
+        "what are some of your work experience"
       ]
     },
     {
@@ -41,7 +42,11 @@
       "utterances": [
         "what school did you go to",
         "are you a recent grad?",
-        "when did you graduate?"
+        "when did you graduate?",
+        "education"
+      ],
+      "answers": [
+        "I was studying at UC Merced from August 2016 to December 2019 and graduated with a B.S. degree in Computer Science and Engineering. Later I studied at App Academy from April to August 2020"
       ]
     },
     {
@@ -50,6 +55,9 @@
         "do you have any publications",
         "have you done any research",
         "what research did you worked on"
+      ],
+      "answers": [
+        "I don't have any publication yet, but I have been working on evolution algorithm projects"
       ]
     },
     {
@@ -99,6 +107,11 @@
         "I am good",
         "Let's move on",
         "How about something else"
+      ],
+      "answers": [
+        "ok!",
+        "let's move on!",
+        "ok is there anything else you would like to know?"
       ]
     },
     {
@@ -128,16 +141,56 @@
       "utterances": [
         "what were some challenge you had",
         "what was the hardest part",
-        "was there anything that you find particularly difficult"
+        "was there anything that you find particularly difficult",
+        "was it challenging"
       ]
     },
     {
-      "intent": "followup.experience.enjoy",
+      "intent": "contact",
       "utterances": [
-        "what do you enjoy the most",
-        "what was the most interesting part",
-        "what did you find interesting",
-        "tell me something interesting"
+        "how can i contact you",
+        "what are some way that I can contact you",
+        "contact",
+        "github account",
+        "linkedin account",
+        "linked in",
+        "git hub"
+      ],
+      "answers": [
+        "Here's are my contacts: [GitHub](https://github.com/LeoYulinLi), [LinkedIn](https://www.linkedin.com/in/leoyulinli/)",
+        "You can find me on [GitHub](https://github.com/LeoYulinLi) or [LinkedIn](https://www.linkedin.com/in/leoyulinli/)"
+      ]
+    },
+    {
+      "intent": "email",
+      "utterances": [
+        "your email",
+        "what is your email address",
+        "can I contact you through email"
+      ],
+      "answers": [
+        "Sorry, but I can only provide you my email address through LinkedIn if you are a recruiter"
+      ]
+    },
+    {
+      "intent": "phone",
+      "utterances": [
+        "your phone",
+        "what is your phone number",
+        "can I contact you through phone",
+        "can I call you"
+      ],
+      "answers": [
+      "Sorry, but I can only provide you my phone number through LinkedIn if you are a recruiter"
+    ]
+    },
+    {
+      "intent": "followup.projects",
+      "utterances": [
+        "what is the project about",
+        "what is it?",
+        "tell me more about the project",
+        "tell me more about this project"
       ]
     },
     {
@@ -160,10 +213,12 @@
       ]
     },
     {
-      "intent": "personal.good",
+      "intent": "saysomething",
       "utterances": [
-        "what are you good at",
-        "what is something that you like to do"
+        "say something"
+      ],
+      "answers": [
+        "something :P"
       ]
     },
     {
@@ -172,13 +227,17 @@
         "do you speak @language",
         "do you know @language",
         "do you know how to @language"
+      ],
+      "answers": [
+        "Yes, I know {{language}}"
       ]
     },
     {
       "intent": "experience.projects",
       "utterances": [
         "what did you work on in the @project project",
-        "what were something you worked on in the @project project"
+        "what were something you worked on in the @project project",
+        "what is @project"
       ]
     },
     {
@@ -189,22 +248,18 @@
       ]
     },
     {
-      "intent": "smalltalk.like",
-      "utterances": [
-        "do you like @thing"
-      ]
-    },
-    {
       "intent": "general.greeting",
       "utterances": [
         "hello",
         "hi",
         "howdy",
         "hey"
-      ],
-      "answers": [
-        "hi",
-        "hello"
+      ]
+    },
+    {
+      "intent": "wildcard.project",
+      "utterances": [
+        "any project"
       ]
     },
     {
@@ -225,7 +280,8 @@
       "options": {
         "chinese": ["chinese", "mandarin"],
         "cantonese": ["cantonese"],
-        "japanese": ["japanese"]
+        "japanese": ["japanese"],
+        "english": ["english"]
       }
     },
     "project": {
@@ -236,7 +292,7 @@
         "Restaurant Roulette": ["Restaurant Roulette"],
         "Simbrain Web": ["Simbrain Web"],
         "NullPointerException": ["NPE", "NullPointerException"],
-        "e-DVIR": ["e-DVIR", "Driver Vehicle Inspection Report", "edvir"]
+        "e-DVIR": ["e-DVIR", "Driver Vehicle Inspection Report", "edvir", "dvir"]
       }
     },
     "skill": {
