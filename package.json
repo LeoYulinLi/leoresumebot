@@ -7,7 +7,7 @@
   "scripts": {
     "tsc": "tsc",
     "dev": "nodemon ./src/server.ts",
-    "build": "yarn run tsc",
+    "build": "yarn install && yarn run tsc",
     "start": "yarn run tsc && node ./build/server.js",
     "heroku-postbuild": "cd frontend && yarn install && yarn build"
   },
