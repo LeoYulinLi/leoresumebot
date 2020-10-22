@@ -27,6 +27,13 @@ Here are some sample if you are not sure what you want to say to the bot:
     
 And more!
 
+## Screenshots
+
+<img style="max-width: 100%;" height="598" src="https://leoresumebot.sfo2.digitaloceanspaces.com/resumebot01.png">
+<img style="max-width: 100%;" height="602" src="https://leoresumebot.sfo2.digitaloceanspaces.com/resumebot02.png">
+<img style="max-width: 100%;" height="599" src="https://leoresumebot.sfo2.digitaloceanspaces.com/resumebot03.png">
+
+
 ## Behind the scene
 ### Where are the data
 They are scattered out in `corpus-en.json`, `resume.json`, `src/data.ts`, `src/handlers`, `src/server.ts`
@@ -246,8 +253,3 @@ as well as randomizing the response to give it more variety.
 ```
 by providing an project entity, the `what` function can pull out the highlight from the resume and append it after some
 phrases.
-
-
-## Screenshots
-
-Digital Ocean is down... Will add some later...
