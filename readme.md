@@ -53,6 +53,9 @@ say. The NLP library will take these utterances (amount other intent groups), to
 intent. The resulting pattern can match any sentences that are close enough in meaning to the training set, thus
 provides a more natural feel to the conversation.
 
+For example, you can say something like "tell me about your expeirience" would work perfectly fine, even though the
+phrase is not the training set (and also the experience has a typo in it)
+
 ### Context
 
 Beside having a flexible input processor, the bot also needs to understand the context of the input.
@@ -71,6 +74,31 @@ This is where the NER (Named Entity Recognition) comes in.
 In the `corpus-en.json`, I enumerated some common skills, projects, languages, etc. in the `entities`.
 That provides the NLP processor to pick up these keyword in the user input, and later, I used those keywords to set the
 context in the conversation handler.
+
+There are also some hard coded context depends on the situation. Let's say in this conversation:
+> user: do you know kotlin
+> 
+> bot: In terms of kotlin, these are some of the projects that I have done:
+>
+> bot: ##[Simbrain] [Image] Simbrain is an open source neural network simulator and visualizer
+
+Since there is only one project that matches the description, if a user would like to know more about the project,
+they should be able to directly ask the bot to tell them more (e.g. "tell me more about _this_ project).
+The context `this` in this case should be really clear to the user, so the bot has a feature where the resulting project
+list has only one entry, it is automatically added to the context. So the user can have a conversation like this:
+
+> user: do you know kotlin
+> 
+> bot: In terms of kotlin, these are some of the projects that I have done:
+>
+> bot: ##[Simbrain] [Image] Simbrain is an open source neural network simulator and visualizer
+>
+> user: what is that about
+>
+> bot: Simbrain is a neural network simulator and visualizer created by Jeffery Yoshimi, my artificial neural network professor.
+>
+> ...
+ 
 
 ### Handlers
 The base handler is inside the `server.ts`.
@@ -92,6 +120,8 @@ Based on the intent provided by the NLP processor, I picked some specific respon
 There are 2 main source of answers: one is from the `corpus-en.json` if I don't need to answer to be flexible, or I
 wrote my own response function to return the answer. Using custom function allows me to return multiple lines of answers
 as well as randomizing the response to give it more variety.
+
+
 
 ## Screenshots
 
