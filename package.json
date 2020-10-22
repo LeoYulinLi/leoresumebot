@@ -15,10 +15,10 @@
     "@types/common-tags": "^1.8.0",
     "@types/node": "^14.11.9",
     "nodemon": "^2.0.5",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "ts-node": "^9.0.0"
   },
   "dependencies": {
+    "typescript": "^4.0.3",
     "@nlpjs/basic": "^4.14.1",
     "@nlpjs/evaluator": "^4.11.3",
     "botbuilder-adapter-web": "^1.0.9",
