@@ -5,6 +5,7 @@ Just a bot to chat with you on my experiences :P
 http://resumebot.r32.me/
 
 ## Features
+- Inputs are processed by NLP (Natural Language Processing) engine
 - The bot knows the context
 - You can ask the bot follow-up questions
 - Ask about details of my projects that are not listed on the resume (e.g. challenges)
@@ -58,6 +59,7 @@ say. The NLP library will take these utterances (amount other intent groups), to
 intent. The resulting pattern can match any sentences that are close enough in meaning to the training set, thus
 provides a more natural feel to the conversation.
 
+#### Why NLP?
 For example, you can say something like "tell me about your expeirience" would work perfectly fine, even though the
 phrase is not the training set (and also the experience has a typo in it)
 
