@@ -38,7 +38,8 @@ They are scattered out in `corpus-en.json`, `resume.json`, `src/data.ts`, `src/h
 
 ### Input Processing
 Inputs are processed by nlp, trained using the `src/train.ts` with nlp.js.
-The training data are provided by the `corpus-en.json`.
+The training data are provided by the `corpus-en.json`. After tranning, the NLP engine can return an `intent` for an
+input.
 
 ```json
     {
@@ -108,6 +109,9 @@ list has only one entry, it is automatically added to the context. So the user c
  
 
 ### Handlers (Output)
+This is where everything comes together. After the NLP engine produces the neccessary intent and context,
+handlers can create an answer based on this information and persist any necessary context for future conversations.
+
 The base handler is inside the `server.ts`.
 
 ```typescript
