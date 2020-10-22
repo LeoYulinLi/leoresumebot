@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 })
 
-const port = 80;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${ port }`));
 
 const controller = new Botkit({

@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "dev": "nodemon ./src/server.ts",
     "build": "yarn install && yarn run tsc",
-    "start": "PORT=3000 yarn install && yarn run tsc && node ./build/server.js",
+    "start": "port=3000 yarn install && yarn run tsc && node ./build/server.js",
     "heroku-postbuild": "cd frontend && yarn install && yarn build"
   },
   "dependencies": {
