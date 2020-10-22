@@ -126,6 +126,56 @@ In the `corpus-en.json`, I enumerated some common skills, projects, languages, e
 That provides the NLP processor to pick up these keyword in the user input, and later, I used those keywords to set the
 context in the conversation handler.
 
+This is what the engine sess when you input the phrase "do you know kotlin":
+```javascript
+{
+  locale: 'en',
+  utterance: 'do you know kotlin',
+  languageGuessed: false,
+  localeIso2: 'en',
+  language: 'English',
+  explanation: [ { token: '', stem: '##exact', weight: 1 } ],
+  classifications: [
+    { intent: 'experience.skills', score: 1 },
+    { intent: 'experience.general', score: 0 },
+    { intent: 'intent.recruit', score: 0 },
+    // omitted a long list of intents that have a score of 0
+  ],
+  intent: 'experience.skills',
+  score: 1,
+  domain: 'default',
+  optionalUtterance: 'do you know @skill',
+  sourceEntities: [],
+  entities: [
+    {
+      start: 12,
+      end: 17,
+      len: 6,
+      levenshtein: 0,
+      accuracy: 1,
+      entity: 'skill',
+      type: 'enum',
+      option: 'kotlin',
+      sourceText: 'kotlin',
+      utteranceText: 'kotlin'
+    }
+  ],
+  answers: [],
+  answer: undefined,
+  actions: [],
+  sentiment: {
+    score: 0.25,
+    numWords: 4,
+    numHits: 1,
+    average: 0.0625,
+    type: 'senticon',
+    locale: 'en',
+    vote: 'positive'
+  }
+}
+```
+The engines is able to extract the entity, and provides it in the `entities` list.
+
 There are also some hard coded context depends on the situation. Let's say in this conversation:
 > user: do you know kotlin
 > 
