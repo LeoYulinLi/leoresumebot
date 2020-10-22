@@ -12,25 +12,8 @@ import { experienceResponder } from "./handlers/experiences";
 import { sampleOne } from "./utils";
 import { projectLongDescriptions } from "./data";
 
-import express from "express"
-import path from "path";
-
-const app = express()
-
-app.use(express.static('frontend/build'));
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-})
-
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server is running on port ${ port }`));
-
 const controller = new Botkit({
-  adapter: new WebAdapter({
-    options: {
-      port: 5000
-    }
-  })
+  adapter: new WebAdapter()
 });
 
 const mapResponseToAnswer = function () {
@@ -72,7 +55,9 @@ const mapResponseToAnswer = function () {
       case "general.greeting":  return [
         sampleOne(["Hello!", "Hi!"]),
         "I am Leo's virtual avatar",
-        "What would you like to know about me?"
+        "What would you like to know about me?",
+        "You can ask me stuff like what programming languages I know",
+        "Or ask me any follow up questions like what was the project about, what did I do, what was some challenges on specific projects"
       ]
       case "experience.skills": {
         const [answers, project] = skillHandler(response.entities)

@@ -70,7 +70,7 @@ function App() {
             onChange={ event => setInput(event.target.value) }
           />
           <InputGroup.Append>
-            <Button type="submit" variant="primary">Button</Button>
+            <Button type="submit" variant="primary">Send</Button>
           </InputGroup.Append>
         </InputGroup>
       </Form>
